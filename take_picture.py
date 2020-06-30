@@ -1,9 +1,8 @@
 import subprocess
 import os
-import datetime
-import time
+from datetime import date, time
 
-dirName = "pictures_" + datetime.date
+dirName = "pictures_" + str(date.today())
 os.mkdir(dirName)
 os.chdir(dirName)
 # camList = subprocess.run(["gphoto2", "--auto-detect"])
@@ -14,7 +13,9 @@ os.chdir(dirName)
 
 def takePic():
     numpix = input("How many pictures would you like to take?")
+    numpix = int(numpix)
     for i in range(numpix):
-        filname = "pix_" + i
-        subprocess.run(["gphoto2", "-capture-image-and-download", "--filename=", filname])
-        time.sleep(5)
+        filname = "--filename=pix_" + str(i)
+        subprocess.run(["gphoto2", "--capture-image-and-download", filname])
+
+takePic()
