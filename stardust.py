@@ -16,6 +16,7 @@ def main():
     take_picture.main()
     crop_scale.main()
     # stack()
-    serve.main()
+    # serve.main()
+
 if __name__ == '__main__':
     main()
