@@ -1,5 +1,4 @@
 import os
-import sys
 import shutil
 from PIL import Image, ImageOps
 
