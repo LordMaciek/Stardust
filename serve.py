@@ -25,5 +25,5 @@ os.chdir('pix_ready')
 
 # Running the server
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    print("serving at {}:8080".format(get_IP))
+    print("serving at {}:8080".format(get_IP()))
     httpd.serve_forever()
