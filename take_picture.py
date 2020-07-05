@@ -12,7 +12,7 @@ os.chdir(dirName)
 # print(camSets)
 
 def takePic():
-    numpix = input("How many pictures would you like to take?")
+    numpix = input("How many pictures would you like to take? ")
     numpix = int(numpix)
     for i in range(numpix):
         filname = "--filename=pix_" + str(i)
