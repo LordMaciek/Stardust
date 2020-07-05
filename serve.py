@@ -13,6 +13,8 @@ def get_IP():
     finally:
         return my_ip
 
+ip_address = get_IP()
+
 # Setting some variables needed for http.server to run,
 # Keeping the default port 8080
 PORT = 8080
@@ -23,5 +25,5 @@ os.chdir('pix_ready')
 
 # Running the server
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    print("serving at {}:8080".format(get_IP()))
+    print("serving at {}:8080".format(ip_address))
     httpd.serve_forever()
