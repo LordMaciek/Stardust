@@ -31,9 +31,10 @@ def main():
         stacked.show()
 
         os.chdir('..')
+        os.chdir('pix_ready')
         stacked.save('stacked_img.tif', 'TIFF')
     except:
-        print("Now pix to crop! Make sure you've followed the order of actions I've had in mind while coding this...")
+        print("No pix to crop! Make sure you've followed the order of actions I've had in mind while coding this...")
 
 if __name__ == '__main__':
     main()

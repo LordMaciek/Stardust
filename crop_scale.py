@@ -5,9 +5,11 @@ from PIL import Image, ImageOps
 """This programme will prepare a serie of images for further processing,
 by cropping them to only include the object of interest."""
 
+
+
 def main():
     if os.path.exists('photos_raw'):
-        raw_folder = 'photos_raw'
+        raw_folder = get_raw_folder()
         del_folders('cropped')
         shutil.copytree(raw_folder, 'cropped')
         print("Cropping and scaling images")
@@ -18,6 +20,13 @@ def main():
     else:
         print("Somehow the pictures aren't there. You sure you started by taking pictures?")
 
+
+def get_raw_folder():
+    try:
+        with open('whereabouts', "r") as f:
+            raw_dir = f.read()
+    except:
+        print("There are no pictures, please start over.")
 
 def del_folders(name):
     contents=os.listdir()

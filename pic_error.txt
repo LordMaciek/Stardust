@@ -1,0 +1,10 @@
+For some reason the picture taking part failed.
+Please start with turning everything off, and turning on again.
+I that fails, try the following - type in your terminal:
+ps -A|grep gphoto
+and hit enter.
+If anything appears, please note the numbers of the processes and for each of them type
+kill -NUMBER
+like
+kill -666
+and hit enter.

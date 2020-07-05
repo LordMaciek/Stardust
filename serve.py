@@ -1,6 +1,5 @@
 import http.server
 import socketserver
-
 import os
 
 # Setting some variables needed for http.server to run,
