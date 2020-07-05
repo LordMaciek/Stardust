@@ -1,0 +1,8 @@
+Please select from the following options and confirm with the RETURN key:
+1. Take the pictures
+2. Crop and scale the pictures
+3. Stack the picture by avarageing each pixel
+4. Enhance the picture (COMING SOON!)
+5. Run a wee local server, which will show you your creations!
+
+TIP: In my opinion it's best to start with option number one. Otherwise the program will not work, too...
