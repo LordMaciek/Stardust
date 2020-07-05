@@ -11,7 +11,6 @@ def main():
         MENU_PROMPT = f.read()
 
     print(WELCOME)
-    input()
     option = input(MENU_PROMPT)
     take_picture.main()
     crop_scale.main()

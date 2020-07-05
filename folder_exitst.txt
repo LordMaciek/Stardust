@@ -1,0 +1,3 @@
+Folder with the default name, {}, already exists.
+Please come up with another name, perhaps describing
+what's in the pictures?
