@@ -6,14 +6,18 @@ from PIL import Image, ImageOps
 by cropping them to only include the object of interest."""
 
 def main():
-    raw_folder = 'photos_raw'
-    del_folders('cropped')
-    shutil.copytree(raw_folder, 'cropped')
-    print("Cropping and scaling images")
-    os.chdir('cropped')
-    crop_imgs()
-    clean_folder(prefix_to_save='cropped')
-    print("Done cropping and scaling!\n")
+    if os.path.exists('photos_raw'):
+        raw_folder = 'photos_raw'
+        del_folders('cropped')
+        shutil.copytree(raw_folder, 'cropped')
+        print("Cropping and scaling images")
+        os.chdir('cropped')
+        crop_imgs()
+        clean_folder(prefix_to_save='cropped')
+        print("Done cropping and scaling!\n")
+    else:
+        print("Somehow the pictures aren't there. You sure you started by taking pictures?")
+
 
 def del_folders(name):
     contents=os.listdir()
