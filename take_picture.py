@@ -17,5 +17,5 @@ def takePic():
         filname = "--filename=pix_" + str(i)
         subprocess.run(["gphoto2", "--capture-image-and-download", filname])
 
-if __name__ == __main__:
+if __name__ == '__main__':
     main()
